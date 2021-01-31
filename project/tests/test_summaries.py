@@ -8,6 +8,7 @@ from app.api import summaries
 def test_create_summary(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
@@ -39,6 +40,7 @@ def test_create_summaries_invalid_json(test_app):
 def test_read_summary(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
@@ -65,6 +67,7 @@ def test_read_summary_incorrect_id(test_app_with_db):
 def test_read_all_summaries(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
@@ -82,6 +85,7 @@ def test_read_all_summaries(test_app_with_db, monkeypatch):
 def test_remove_summary(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
@@ -116,6 +120,7 @@ def test_remove_summary_incorrect_id(test_app_with_db):
 def test_update_summary(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
